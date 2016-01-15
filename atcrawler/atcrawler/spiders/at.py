@@ -3,12 +3,10 @@
 import json
 import urlparse
 
-import requests
 from scrapy import Spider, Request
 
 from atcrawler.items import AtcrawlerItem
 from ..info import *
-from ..settings import *
 
 
 class AT(Spider):
@@ -17,8 +15,6 @@ class AT(Spider):
     for type_number in TYPE_RANGE:
         for mode_number in MODE_RANGE:
             start_urls.append(BASE_URL.format(**dict([('st', 0), ('type', type_number), ('mode', mode_number)])))
-    session = requests.session()
-    session.headers = {'user-agent': USER_AGENT}
 
     def parse(self, response):
         j = json.loads(response.body)
