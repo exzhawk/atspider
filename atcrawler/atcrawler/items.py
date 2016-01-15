@@ -9,4 +9,5 @@ import scrapy
 
 
 class AtcrawlerItem(scrapy.Item):
-    image_urls = scrapy.Field()
+    # image_urls = scrapy.Field()
+    image_url = scrapy.Field()

@@ -15,8 +15,11 @@ SPIDER_MODULES = ['atcrawler.spiders']
 NEWSPIDER_MODULE = 'atcrawler.spiders'
 
 USER_AGENT = 'Apache-HttpClient/UNAVAILABLE (java 1.4)'
-ITEM_PIPELINES = {'scrapy.pipelines.images.ImagesPipeline': 1}
-IMAGES_STORE = 'H:\TEMP'
+# ITEM_PIPELINES = {'scrapy.pipelines.images.ImagesPipeline': 1}
+
+ITEM_PIPELINES = {'atcrawler.pipelines.AtcrawlerPipeline': 800}
+LOG_LEVEL = 'INFO'
+# IMAGES_STORE = 'H:\TEMP'
 # Configure maximum concurrent requests performed by Scrapy (default: 16)
 CONCURRENT_REQUESTS = 512
 

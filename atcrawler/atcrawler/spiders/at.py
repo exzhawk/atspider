@@ -24,13 +24,11 @@ class AT(Spider):
         j = json.loads(response.body)
         blogs = j.get('data').get('blogs')
         if blogs:
-            img_srcs = []
             for blog in blogs:
                 img_src = blog.get('isrc').replace('/images_min/', '/images/')
-                img_srcs.append(img_src)
-            item = AtcrawlerItem()
-            item['image_urls'] = list(img_srcs)
-            yield item
+                item = AtcrawlerItem()
+                item['image_url'] = img_src
+                yield item
             url_component = urlparse.urlparse(response.url)
             q_component = urlparse.parse_qs(url_component.query)
             type_number = q_component.get('type')[0]
