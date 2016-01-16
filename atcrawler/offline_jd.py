@@ -19,7 +19,4 @@ for f in files:
         tree = etree.HTML(content)
         imgs = tree.xpath('//img/@src')
         for img in imgs:
-            try:
-                output_file.write(unicode(img) + '\n')
-            except:
-                pass
+            output_file.write(unicode(img) + '\n')
