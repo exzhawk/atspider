@@ -14,11 +14,12 @@ BOT_NAME = 'atcrawler'
 SPIDER_MODULES = ['atcrawler.spiders']
 NEWSPIDER_MODULE = 'atcrawler.spiders'
 
-USER_AGENT = 'Apache-HttpClient/UNAVAILABLE (java 1.4)'
+# USER_AGENT = 'Apache-HttpClient/UNAVAILABLE (java 1.4)'
+USER_AGENT = 'okhttp/2.6.0'
 # ITEM_PIPELINES = {'scrapy.pipelines.images.ImagesPipeline': 1}
 
 ITEM_PIPELINES = {'atcrawler.pipelines.AtcrawlerPipeline': 800}
-LOG_LEVEL = 'INFO'
+# LOG_LEVEL = 'INFO'
 # IMAGES_STORE = 'H:\TEMP'
 # Configure maximum concurrent requests performed by Scrapy (default: 16)
 CONCURRENT_REQUESTS = 512
@@ -31,8 +32,10 @@ CONCURRENT_REQUESTS = 512
 # CONCURRENT_REQUESTS_PER_DOMAIN=16
 CONCURRENT_REQUESTS_PER_IP = 512
 
+RETRY_TIMES = 999
+
 # Disable cookies (enabled by default)
-COOKIES_ENABLED = False
+# COOKIES_ENABLED = False
 
 # Disable Telnet Console (enabled by default)
 # TELNETCONSOLE_ENABLED=False
