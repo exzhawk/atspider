@@ -1,9 +1,9 @@
-/atcrawler/jd
+/atcrawler/offline
+/atcrawler/pic_list.txt
 /atcrawler/atcrawler/info.py
 ### JetBrains template
 # Covers JetBrains IDEs: IntelliJ, RubyMine, PhpStorm, AppCode, PyCharm, CLion, Android Studio
 
-*.iml
 
 ## Directory-based project format:
 .idea/
