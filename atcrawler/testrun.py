@@ -2,4 +2,4 @@
 # Author: Epix
 from scrapy import cmdline
 
-cmdline.execute('scrapy crawl jd'.split())
+cmdline.execute('scrapy crawl pc'.split())
