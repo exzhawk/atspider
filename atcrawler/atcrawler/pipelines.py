@@ -21,3 +21,13 @@ class AtcrawlerPipeline(object):
             line = image_url + '\n'
             self.file.write(line)
             return item
+
+
+class PCcrawlerPipeline(object):
+    def __init__(self):
+        self.file = open('req_json.jl', 'w')
+
+    def process_item(self, item, spider):
+        line = item['req_json'] + "\n"
+        self.file.write(line)
+        return item

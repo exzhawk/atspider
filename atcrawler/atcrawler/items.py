@@ -11,3 +11,7 @@ import scrapy
 class AtcrawlerItem(scrapy.Item):
     # image_urls = scrapy.Field()
     image_url = scrapy.Field()
+
+
+class PCcrawlerItem(scrapy.Item):
+    req_json = scrapy.Field()

@@ -18,7 +18,8 @@ NEWSPIDER_MODULE = 'atcrawler.spiders'
 USER_AGENT = 'okhttp/2.6.0'
 # ITEM_PIPELINES = {'scrapy.pipelines.images.ImagesPipeline': 1}
 
-ITEM_PIPELINES = {'atcrawler.pipelines.AtcrawlerPipeline': 800}
+ITEM_PIPELINES = {'atcrawler.pipelines.PCcrawlerPipeline': 800}
+LOG_FILE = 'scrapy.log'
 # LOG_LEVEL = 'INFO'
 # IMAGES_STORE = 'H:\TEMP'
 # Configure maximum concurrent requests performed by Scrapy (default: 16)
@@ -33,6 +34,7 @@ CONCURRENT_REQUESTS = 512
 CONCURRENT_REQUESTS_PER_IP = 512
 
 RETRY_TIMES = 999
+
 
 # Disable cookies (enabled by default)
 # COOKIES_ENABLED = False
